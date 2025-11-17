@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedConnect – Smart TeleHealth Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Although the app doesn't have a toggle yet, this prepares it.
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: '#0D1B2A', // Deep Blue
+                light: '#1B263B',
+              },
+              secondary: {
+                DEFAULT: '#00F5D4', // Bright Green/Mint
+              },
+              accent: {
+                DEFAULT: '#00B4D8', // Rich Cyan
+              },
+              light: '#E0E1DD', // Cool light grey
+              dark: '#0D1B2A', // Same as primary for consistency
+              // NEW: Add semantic text colors for consistency and accessibility
+              text: {
+                  main: '#E0E1DD', // Default light text, same as `light`
+                  muted: '#A8B2C2', // A lighter gray for secondary info
+                  'on-accent': '#0D1B2A' // High-contrast text for buttons/accent backgrounds
+              },
+              glass: 'rgba(27, 38, 59, 0.3)', // Semi-transparent for glassmorphism
+              'glow-start': '#00B4D8',
+              'glow-end': '#00F5D4',
+            },
+            boxShadow: {
+              'glow-sm': '0 0 8px rgba(0, 180, 216, 0.5)',
+              'glow-md': '0 0 16px rgba(0, 180, 216, 0.5)',
+              'glow-lg': '0 0 24px rgba(0, 180, 216, 0.6)',
+              'glow-xl': '0 0 48px rgba(0, 245, 212, 0.5)',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              glow: {
+                'from': { 'box-shadow': '0 0 10px -5px #00F5D4' },
+                'to': { 'box-shadow': '0 0 10px 5px #00B4D8' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "react-icons/": "https://aistudiocdn.com/react-icons@^5.5.0/"
+  }
+}
+</script>
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+</style>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
